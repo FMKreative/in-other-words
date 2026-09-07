@@ -1,5 +1,7 @@
 # Talk the Talk
 
+Version 2.0.1
+
 Talk the Talk helps you write, rewrite, summarize, and explain clearly. Use it to draft from a brief, improve human or AI writing, or make a difficult passage easier to understand.
 
 It keeps the meaning, necessary detail, and an appropriate voice. It follows the requested language and its natural usage. Quality can vary by language and task.
@@ -60,4 +62,4 @@ Version 2.0.0 renames `clear-english` to `talk-the-talk`. Use `$talk-the-talk` i
 
 This version adds drafting from a brief and support for other languages. It removes automatic readability scores, sentence-length targets, and the Python scoring tools.
 
-The instructions are in [SKILL.md](SKILL.md), the display settings are in [agents/openai.yaml](agents/openai.yaml), and the version is in [VERSION](VERSION). See [LICENSE](LICENSE) for licensing terms.
+The instructions are in [SKILL.md](SKILL.md) and the display settings are in [agents/openai.yaml](agents/openai.yaml). See [LICENSE](LICENSE) for licensing terms.

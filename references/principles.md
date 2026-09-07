@@ -42,6 +42,6 @@ The earlier skill's measurement rationale came from [Flesch's readability paper]
 
 Keep the skill name and installed folder aligned as `talk-the-talk`. Version 2.0.0 replaces `clear-english`, broadens the skill to new writing and other languages, and removes automatic scoring. Old explicit invocations must use the new name.
 
-Use `VERSION` for the version number. When publishing a release, use the matching `v`-prefixed Git tag and GitHub Release; release notes belong there. Updating the skill locally does not require publishing a release.
+Record the version near the top of `README.md`. When publishing a release, use the matching `v`-prefixed Git tag and GitHub Release; release notes belong there. Updating the skill locally does not require publishing a release.
 
 For future revisions, review a few realistic outputs for fidelity, clarity, voice, and task fit. Include another language when changing multilingual guidance. Evaluate actual writing rather than optimizing a score or adding a rule for every awkward phrase.
