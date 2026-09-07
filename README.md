@@ -1,6 +1,6 @@
 # Talk the Talk
 
-Version 2.0.1
+Version 2.0.2
 
 Write, rewrite, summarize, and explain in clear, natural language. Talk the Talk helps you draft from notes, improve your own writing, or “unslop” AI-generated text by removing filler, inflated wording, stale phrases, and needless repetition while keeping the meaning and voice.
 
