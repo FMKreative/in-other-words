@@ -1,18 +1,8 @@
 # Principles and provenance
 
-Use this reference when maintaining the skill or planning a later version. The operating rules belong in `SKILL.md`; do not load this file for routine transformations.
+The operating instructions in `SKILL.md` adapt the sources below. Read this reference when maintaining the skill or discussing its foundations, not for routine writing.
 
-## Versioning and releases
-
-Keep the skill name and folder stable as `clear-english`. Record the installed release in the root `VERSION` file and publish the same number as a Git tag and GitHub Release, prefixed with `v` (for example, `VERSION` contains `1.0.0` and the release tag is `v1.0.0`).
-
-Use semantic versioning for future changes:
-
-- Patch (`1.0.1`) for fixes that preserve the skill's intended behavior.
-- Minor (`1.1.0`) for backward-compatible capabilities or meaningful rule improvements.
-- Major (`2.0.0`) for changed defaults, boundaries, or output contracts that may surprise existing users.
-
-For each release, update `VERSION`, validate and test the skill, commit the change, create the matching tag, and summarize user-visible changes in the GitHub Release notes. GitHub Releases are the changelog; do not add a separate changelog file. Users can compare their local `VERSION` with the latest GitHub Release. A Git clone can also use `git describe --tags --always` and update with Git; a release archive should be replaced with a newer tagged archive.
+These sources primarily discuss English. Apply their principles of clarity and reader focus across languages while respecting local usage. They do not establish equal effectiveness in every language.
 
 ## Writing sources
 
@@ -40,43 +30,18 @@ Use its reader-centered practices: write for the actual audience, organize aroun
 
 Primary source: [ASD-STE100 Simplified Technical English](https://www.asd-ste100.org/), Issue 9, 15 January 2025, rule 9.1.
 
-Adapt its instruction to recast a sentence when word-for-word replacement is insufficient or changes the meaning. Do not adopt or bundle the standard, its controlled vocabulary, hard sentence limits, or other compliance rules. Clear English applies to broader forms of writing and must preserve natural language, meaning, and tone.
+Adapt its instruction to recast a sentence when word-for-word replacement is insufficient or changes the meaning. Do not adopt or bundle the standard, its controlled vocabulary, hard sentence limits, or other compliance rules. Talk the Talk applies to broader forms of writing and must preserve natural language, meaning, and tone.
 
-## Readability sources
+## Why there is no readability score
 
-### Rudolf Flesch
+Sentence length and word length cannot establish accuracy, coherence, naturalness, or usefulness. Talk the Talk uses a brief review of meaning and reader effort instead of a numerical target. It has no bundled scoring scripts, fixed sentence lengths, or score reports.
 
-Primary paper: [A New Readability Yardstick](https://comp311.wordpress.com/wp-content/uploads/2010/11/flesch_rudolph.pdf)
+The earlier skill's measurement rationale came from [Flesch's readability paper](https://comp311.wordpress.com/wp-content/uploads/2010/11/flesch_rudolph.pdf), [DuBay's survey](https://files.eric.ed.gov/fulltext/ED490073.pdf), and the CIEP guide [Editing into Plain English](https://ciep.uk/static/f8b59fff-ebd7-4089-918595de6409fada/Editing-into-Plain-English-CIEP-guide.pdf). These remain background on the limits of formula-based assessment, not operating requirements.
 
-Use the 1948 paper as the authority for Reading Ease:
+## Maintenance
 
-`206.835 - 1.015 * words_per_sentence - 84.6 * syllables_per_word`
+Keep the skill name and installed folder aligned as `talk-the-talk`. Version 2.0.0 replaces `clear-english`, broadens the skill to new writing and other languages, and removes automatic scoring. Old explicit invocations must use the new name.
 
-Flesch used sentence length and syllables as measurable proxies for difficulty. The paper also describes shortcomings, manual counting conventions, and sampling around 100 words. The bundled script automates these ideas with documented, deterministic approximations; it does not claim to reproduce a human count exactly.
+Use `VERSION` for the version number. When publishing a release, use the matching `v`-prefixed Git tag and GitHub Release; release notes belong there. Updating the skill locally does not require publishing a release.
 
-### William H. DuBay
-
-Research survey: [The Principles of Readability](https://files.eric.ed.gov/fulltext/ED490073.pdf)
-
-Use the survey as support for cautious interpretation. Merely shortening words and sentences does not reliably improve comprehension. Content, organization, coherence, reader knowledge, interest, and motivation also matter. Different programs may return different scores because their counting methods differ.
-
-### Chartered Institute of Editing and Proofreading
-
-Practitioner guide: [Editing into Plain English](https://ciep.uk/static/f8b59fff-ebd7-4089-918595de6409fada/Editing-into-Plain-English-CIEP-guide.pdf)
-
-Use the guide to define what the formula misses: headings, logical argument, ambiguity, grammar, punctuation, structure, and usefulness. Do not assess plainness from a formula alone.
-
-## Intentional v1 limitations
-
-Decision recorded: 2026-08-04.
-
-These are accepted tradeoffs, not defects. They match the chosen version 1 behavior and require no further design work now.
-
-1. **The skill affects matching writing tasks, not every AI response.**
-   - Revisit when consistent language is needed across unrelated AI responses. A separate platform-level instruction would be a different layer from this skill.
-2. **Flesch is an estimate of surface difficulty, not a quality score.**
-   - Revisit if results prove too unstable or insufficient for non-native readers. Compare alternative diagnostics or reader testing before adding another score.
-3. **Strict source boundaries can limit an explanation without requiring a gap disclaimer.**
-   - The skill should answer supported parts directly and mention an omission only when it materially affects the request or would otherwise mislead the user. Revisit if explanations stop too often. Consider a clearly labeled, opt-in outside-context mode.
-4. **Tone preservation can limit how aggressively some text is simplified.**
-   - Revisit if preserved style repeatedly blocks useful simplification. Consider explicit tone-versus-clarity modes.
+For future revisions, review a few realistic outputs for fidelity, clarity, voice, and task fit. Include another language when changing multilingual guidance. Evaluate actual writing rather than optimizing a score or adding a rule for every awkward phrase.

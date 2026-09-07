@@ -1,4 +1,4 @@
 interface:
-  display_name: "Clear English"
-  short_description: "Simplify English without losing meaning"
-  default_prompt: "Use $clear-english to rewrite this text in clear, natural English while preserving its meaning and tone."
+  display_name: "Talk the Talk"
+  short_description: "Clear, natural writing that keeps your meaning"
+  default_prompt: "Use $talk-the-talk to write or improve this text clearly and naturally for its intended reader."

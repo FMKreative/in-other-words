@@ -1,64 +1,41 @@
-# Clear English
+# Talk the Talk
 
-Clear English is a Codex skill for rewriting, summarizing, explaining, and simplifying supplied English. It makes writing clearer and more natural for broad adult audiences, including non-native English speakers, without changing the meaning or voice.
+Talk the Talk helps you write, rewrite, summarize, and explain clearly. Use it to draft from a brief, improve human or AI writing, or make a difficult passage easier to understand.
 
-## Use it when you want to
-
-- rewrite unclear, formal, or overly dense writing
-- simplify technical or academic language
-- summarize a passage faithfully
-- explain a difficult passage using the supplied source
+It keeps the meaning, necessary detail, and an appropriate voice. It follows the requested language and its natural usage. Quality can vary by language and task.
 
 ## Use it
 
-Invoke the skill with a request such as:
+Invoke the skill as `$talk-the-talk` and describe what you need:
 
 ```text
-Use $clear-english to rewrite this text in clear, natural English while preserving its meaning and tone.
+Use $talk-the-talk to draft a short project update from these notes.
 ```
 
-You can also specify the format, audience, length, or readability target you need.
-
-## What it preserves
-
-The skill keeps facts, numbers, names, attribution, uncertainty, conditions, warnings, necessary detail, and tone. It uses the supplied source and does not add unsupported information.
-
-It measures substantial rewrites with Flesch Reading Ease and average sentence length. These metrics describe surface difficulty; they are not proof of quality, comprehension, or usefulness.
-
-## Repository guide
-
-| File | Purpose |
-| --- | --- |
-| [`SKILL.md`](SKILL.md) | Operating instructions and writing rules |
-| [`scripts/readability.py`](scripts/readability.py) | Readability measurement utility |
-| [`scripts/test_readability.py`](scripts/test_readability.py) | Readability tests |
-| [`evals/`](evals/) | Representative evaluation cases |
-| [`references/principles.md`](references/principles.md) | Rationale, sources, limitations, and release guidance |
-| [`VERSION`](VERSION) | Current release version |
-
-## Development
-
-Run the tests with:
-
-```bash
-python3 -m unittest discover -s scripts -p 'test_*.py'
+```text
+Use $talk-the-talk to rewrite this email. Keep it warm, but make my request clearer.
 ```
 
-Measure a text file with:
-
-```bash
-python3 scripts/readability.py path/to/file.txt
+```text
+Use $talk-the-talk to summarize this report in three paragraphs. Keep the main limitations.
 ```
 
-Measure the fixed rewritten-output baseline with:
-
-```bash
-python3 scripts/measure_baseline.py
-python3 scripts/measure_baseline.py --fail-under 65
-python3 scripts/measure_baseline.py --outputs evals/revised_outputs.json --fail-under 65
-python3 scripts/measure_baseline.py --outputs evals/fidelity_checked_outputs.json --fail-under 65
+```text
+Use $talk-the-talk to make this German text clearer while keeping it in German.
 ```
 
-Review the non-quantitative guardrails in [`evals/quality-rubric.md`](evals/quality-rubric.md).
+Specify the audience, tone, language, or length when they matter. The skill preserves the source language unless you request translation. For new writing, it uses the language of your request unless you specify another.
 
-See [`LICENSE`](LICENSE) for licensing information.
+## How it works
+
+The skill favors familiar words, concrete meaning, useful structure, and natural rhythm. It checks the result briefly for accuracy and clarity, then returns the text without a score or editing report unless you ask for one. Routine use needs no scripts or extra tools.
+
+Its principles draw on George Orwell, the Kansas City Star, Digital.gov, and selected guidance from Simplified Technical English. Their emphasis on the reader guides the writing; language-specific rules follow the language being used. See [principles and provenance](references/principles.md) for the sources and how they are adapted.
+
+## Updating from Clear English
+
+Version 2.0.0 renames `clear-english` to `talk-the-talk`. Use `$talk-the-talk` in place of the old invocation, and replace the old installed skill folder with one named `talk-the-talk`.
+
+This version adds drafting from a brief and support for other languages. It removes automatic readability scores, sentence-length targets, and the Python scoring tools.
+
+The instructions are in [SKILL.md](SKILL.md), the display settings are in [agents/openai.yaml](agents/openai.yaml), and the version is in [VERSION](VERSION). See [LICENSE](LICENSE) for licensing terms.

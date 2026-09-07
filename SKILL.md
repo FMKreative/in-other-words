@@ -1,62 +1,39 @@
 ---
-name: clear-english
-description: Rewrite, summarize, explain, and simplify existing user-authored or user-provided English so it is clear, direct, natural, and easier for broad or non-native adult audiences to understand while preserving meaning, facts, uncertainty, necessary detail, and tone. Use when a user asks to clarify their writing, remove fluff or AI-like language, produce a faithful plain-English summary, explain a difficult passage, or simplify existing text without adding outside knowledge.
+name: talk-the-talk
+description: Write, rewrite, summarize, and explain clearly and naturally in the requested language. Use for drafting from a brief, improving human or AI text, simplifying difficult passages, or producing faithful summaries while preserving accuracy and an appropriate voice.
 ---
 
-# Clear English
+# Talk the Talk
 
-Transform existing user-authored or user-provided English without weakening its meaning or replacing its voice. Treat clarity as a reader outcome, not a demand for uniformly short prose.
+Help the intended reader understand the message. Follow the requested audience, language, tone, format, and length; otherwise use natural language for a broad adult audience.
 
-## Priorities
+## Meaning and language
 
-Resolve conflicts in this order: (1) accuracy and source fidelity, (2) required meaning, qualifications, tone, and user-required terms, (3) requested format and length, then (4) readability target.
+- When rewriting or explaining supplied text, preserve its meaning, facts, attribution, uncertainty, conditions, and voice. Summaries may omit detail but must retain the context and qualifications needed to understand the claims they keep. Do not add outside facts unless the task calls for them.
+- When drafting from a brief, use the supplied context and available evidence. Do not invent facts, sources, promises, or personal experiences to make the writing more convincing. Ask for missing information only when it is necessary to fulfill the request accurately.
+- Write in the requested language. Otherwise preserve the source language, or use the language of the request for new writing. Translate only when asked. Follow the language's own idiom, grammar, register, and punctuation; English examples are illustrations, not templates for other languages.
 
-## Workflow
+## Writing principles
 
-1. **Identify the operation.** Infer whether the user wants a rewrite, summary, explanation, or simplification. Follow requested constraints. Otherwise write for a broad adult audience that includes non-native English speakers.
-2. **Set the target silently.** For substantial text, require at least 60, prefer 60–89, and aim near 80 to leave room for the formula's estimate. Accept scores above 89. Replace the default with any explicit target: treat “score 70” or “around 70” as 65–75, “at least 70” as 70 or higher, and a stated range as bounded at both ends. Never ask the user to choose or confirm a score.
-3. **Set boundaries.** Use only the text and context the user provides. Preserve names, facts, numbers, attribution, uncertainty, conditions, warnings, meaning, and tone. Fidelity protects meaning, not wording or academic register. Do not add outside knowledge or unsupported claims. Mention a source gap only when silence would mislead.
-4. **Plan plain wording.** Before drafting, replace each long or abstract phrase that has a shorter accurate equivalent. Keep a specialized term only when the user requires it or replacement would lose meaning. A term is not required merely because the source uses it. When a necessary term is long or technical, simplify the surrounding sentence instead of replacing the term only to improve the score.
-5. **Draft once.** Apply the principles below in one language pass. Summaries may omit detail but must keep the context and caveats needed for each claim. Explanations may make supported relationships explicit but may not import facts.
-6. **Check reader effort and fidelity before scoring.** Make the main point easy to find. Keep actors close to their actions, limit each sentence to one main claim when possible, and separate claims from causes, conditions, exceptions, warnings, and next steps. For procedural text, make the responsible actor and action explicit. For academic or explanatory text, separate the finding, its limits, and its implication. For product or UI text, lead with the action or outcome the source supports. Restore lost scope, responsibility, sequence, qualifications, or emotional character within the same pass. Keep tentative claims tentative and opinions identifiable as opinions.
-7. **Measure once.** Score only the final text after the reader-effort and fidelity check. Score the original only when the user requests a comparison. Never generate or revise another version after seeing the score.
-8. **Return the result first.** On a miss, return the best faithful version, actual score, and one brief note. Do not retry, ask what to do, or describe edits unless requested.
+These principles draw on Orwell, the Kansas City Star, Digital.gov, and selected guidance from Simplified Technical English. Apply their emphasis on meaning and reader needs with judgment.
 
-## Editing principles
+- Put the main point where the reader needs it. Keep related ideas together and make actors, actions, relationships, and next steps clear. Use paragraphs, headings, or lists when they help.
+- Prefer familiar, precise words and direct verbs. Turn abstract wording into concrete meaning. Keep technical terms when they carry necessary precision; explain them when the audience needs it. Use consistent names for the same concept.
+- Remove needless words, repetition, inflated claims, stale phrases, and empty transitions. Every sentence should contribute to the reader's understanding or the intended voice.
+- Recast a difficult sentence instead of merely swapping words. Separate tangled claims and qualifications, and prefer active voice when it clarifies responsibility. Vary sentence length naturally; avoid strings of fragments.
+- Preserve personality, stance, and emotional character when editing. For new writing, use the voice the task calls for. Do not add opinions, forced enthusiasm, or deliberate roughness to sound human.
+- Let accuracy, necessary nuance, and natural expression override mechanical rules. Clear language should not become childish or generic.
 
-- Lead with the main point. Use familiar, precise words and direct verbs.
-- Translate supported labels into plain meaning: “a study over time” for “a longitudinal study” or “make the new value appear at once” for “provide immediate consistency.” Recast the sentence when word-for-word replacement would sound unnatural or change the meaning. Keep exact terms such as “statistically significant” when the claim requires them.
-- Break dense noun phrases into clauses with clear actors. Separate claims, conditions, causes, and qualifications.
-- In dense prose, aim for 8–12 words in sentences containing necessary long terms. Name a term once, then use an unambiguous short reference.
-- Reduce avoidable reading effort across domains: put the purpose or main point early, keep related ideas together, and use short paragraphs or lists when they clarify the source’s structure.
-- Remove redundant ideas, inflated wording, needless modifiers, and empty transitions. Keep consistent names for the same concept; do not vary terms merely to avoid repetition. Do not pad the text or create strings of fragments.
-- Avoid em dashes by default. Recast the sentence with simpler punctuation while preserving meaning and tone.
-- Prefer active voice when the actor matters. Use short paragraphs or headings when they help.
-- Break any mechanical rule when accuracy, tone, or natural English requires it. Avoid childish language and do not force an optimistic tone.
+## Examples
 
-## Tone
+- “In order to facilitate access” → “To make access easier.”
+- “The change resulted in an improvement in response times” → “The change improved response times.” Do not invent a measured improvement.
+- “The findings suggest an association, but do not establish causation” → “The findings suggest a link, but do not show that one thing caused the other.” Keep the uncertainty and distinction.
 
-Preserve personality, formality, stance, and emotional character. For a user-authored draft, improve awkward wording without making the writer sound generic. Simplify within that voice; if tone and simplification conflict, preserve tone.
+## Before returning
 
-## Readability
+Briefly check that the text fulfills the request, preserves accuracy and necessary meaning, and reads naturally without avoidable difficulty. Fix any issue you notice. Return the requested text without a checklist, score, or explanation of edits unless asked. Routine writing needs no tools or numerical measurement.
 
-Treat 100 counted words as substantial text and a standard sample. Run `python3 scripts/readability.py <path>` from this directory or send the final text through stdin. Use `--json` for structured output.
+## References
 
-- Target and report readability by default only for substantial text. Measure shorter text only when asked and call it a short-sample estimate.
-- Report only the final result unless the user asks for an original-to-final comparison.
-- Treat Flesch Reading Ease as an estimate of surface difficulty, not proof of clarity, accuracy, coherence, comprehension, or usefulness.
-- Give the score a rough reference: 90–100 is very easy, 80–89 easy, 70–79 fairly easy, 60–69 standard, 50–59 fairly difficult, 30–49 difficult, and 0–29 very difficult. These labels describe surface difficulty and can misrepresent technical or specialized writing.
-- Report average words per sentence to one decimal place with the label short, moderate, long, or very long. Treat it as orientation, not a goal.
-- Omit “Scorable words” from the default note. If the count helps explain a short sample or comparison, call it “Words counted.”
-
-Append a compact block after the transformed text. Include the parenthetical context so the numbers do not stand alone:
-
-```text
-Readability
-- Flesch Reading Ease: 71.2 (fairly easy)
-- Average sentence length: 15.1 words (moderate)
-```
-
-## Maintenance reference
-
-Read [references/principles.md](references/principles.md) only when reviewing the rationale, maintaining the rules, or planning a later version. Do not load it for routine transformations.
+The principles above are sufficient for ordinary use. Read [principles and provenance](references/principles.md) when maintaining the skill or discussing its foundations.
