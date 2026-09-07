@@ -2,7 +2,7 @@
 
 Version 2.0.1
 
-Write, rewrite, summarize, and explain in clear, natural language. Talk the Talk helps you draft from notes, improve your own writing, or **“unslop” AI-generated text** by removing filler, inflated wording, stale phrases, and needless repetition while keeping the meaning and voice.
+Write, rewrite, summarize, and explain in clear, natural language. Talk the Talk helps you draft from notes, improve your own writing, or “unslop” AI-generated text by removing filler, inflated wording, stale phrases, and needless repetition while keeping the meaning and voice.
 
 Its foundations are George Orwell, the Kansas City Star, Digital.gov, and selected guidance from Simplified Technical English: respect the reader, use precise words, and make the message easy to follow. See [principles and provenance](references/principles.md) for the sources and how they are adapted.
 
