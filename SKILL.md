@@ -29,7 +29,8 @@ Resolve conflicts in this order: (1) accuracy and source fidelity, (2) required 
 - Break dense noun phrases into clauses with clear actors. Separate claims, conditions, causes, and qualifications.
 - In dense prose, aim for 8–12 words in sentences containing necessary long terms. Name a term once, then use an unambiguous short reference.
 - Reduce avoidable reading effort across domains: put the purpose or main point early, keep related ideas together, and use short paragraphs or lists when they clarify the source’s structure.
-- Remove repetition, inflated wording, needless modifiers, and empty transitions. Do not pad the text or create strings of fragments.
+- Remove redundant ideas, inflated wording, needless modifiers, and empty transitions. Keep consistent names for the same concept; do not vary terms merely to avoid repetition. Do not pad the text or create strings of fragments.
+- Avoid em dashes by default. Recast the sentence with simpler punctuation while preserving meaning and tone.
 - Prefer active voice when the actor matters. Use short paragraphs or headings when they help.
 - Break any mechanical rule when accuracy, tone, or natural English requires it. Avoid childish language and do not force an optimistic tone.
 
