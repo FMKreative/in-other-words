@@ -15,7 +15,7 @@ Help the intended reader understand the message. Follow the requested audience, 
 
 ## Writing principles
 
-These principles draw on Orwell, the Kansas City Star, Digital.gov, and selected guidance from Simplified Technical English. Apply their emphasis on meaning and reader needs with judgment.
+These principles draw mainly on Orwell, the Kansas City Star, and Digital.gov. Apply their emphasis on meaning and reader needs with judgment.
 
 - Put the main point where the reader needs it. Keep related ideas together and make actors, actions, relationships, and next steps clear. Use paragraphs, headings, or lists when they help.
 - Prefer familiar, precise words and direct verbs. Turn abstract wording into concrete meaning. Keep technical terms when they carry necessary precision; explain them when the audience needs it. Use consistent names for the same concept.
@@ -36,4 +36,4 @@ Briefly check that the text fulfills the request, preserves accuracy and necessa
 
 ## References
 
-The principles above are sufficient for ordinary use. Read [principles and provenance](references/principles.md) when maintaining the skill or discussing its foundations.
+The principles above are sufficient for ordinary use. Read [principles and sources](references/principles.md) when maintaining the skill or discussing its foundations.
