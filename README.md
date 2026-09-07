@@ -4,9 +4,35 @@ Talk the Talk helps you write, rewrite, summarize, and explain clearly. Use it t
 
 It keeps the meaning, necessary detail, and an appropriate voice. It follows the requested language and its natural usage. Quality can vary by language and task.
 
+## Install
+
+Download [talk-the-talk.zip](https://github.com/FMKreative/talk-the-talk/releases/latest/download/talk-the-talk.zip) from the latest release. It contains one `talk-the-talk/` folder with the skill and its supporting files.
+
+### Claude
+
+Upload the ZIP without extracting it: open **Customize → Skills**, choose **+ → Create skill → Upload a skill**, then select `talk-the-talk.zip`. Enable the skill and ask Claude to use Talk the Talk. See [Claude's installation guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+
+### Claude Code
+
+Extract the ZIP and place its `talk-the-talk` folder in `~/.claude/skills/` for personal use, or `.claude/skills/` inside a project. The resulting path should end in `talk-the-talk/SKILL.md`. Invoke it with `/talk-the-talk`. See [Claude Code's skill documentation](https://code.claude.com/docs/en/skills).
+
+### Codex
+
+Extract the ZIP and place its `talk-the-talk` folder in `~/.agents/skills/` for personal use, or `.agents/skills/` inside a project. Invoke it with `$talk-the-talk`. The personal installation has been checked locally in Codex.
+
+### Other compatible agents
+
+For tools supported by the third-party [Skills CLI](https://github.com/vercel-labs/skills), run:
+
+```bash
+npx skills add FMKreative/talk-the-talk --skill talk-the-talk
+```
+
+Choose your agent in the installer. This route requires Node.js and npm. The command follows the installer's documentation; it has not been tested with this repository. Claude's upload and Claude Code's installation paths are documented by Anthropic, but have not been tested with this skill. Other tools may use different locations or invocation syntax.
+
 ## Use it
 
-Invoke the skill as `$talk-the-talk` and describe what you need:
+Use the invocation for your tool and describe what you need. These examples use Codex syntax:
 
 ```text
 Use $talk-the-talk to draft a short project update from these notes.
