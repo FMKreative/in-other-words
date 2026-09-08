@@ -1,6 +1,6 @@
 # In Other Words
 
-Version 2.0.2
+Version 3.0.0
 
 Write, rewrite, summarize, and explain in clear, natural language. In Other Words helps you draft from notes, improve your own writing, or “unslop” AI-generated text by removing filler, inflated wording, stale phrases, and needless repetition while keeping the meaning and voice.
 
@@ -27,7 +27,7 @@ It briefly checks accuracy and clarity, then returns the requested text. Routine
 With Node.js and npm available, run the third-party [Skills CLI](https://github.com/vercel-labs/skills) and choose your agent:
 
 ```bash
-npx skills add FMKreative/talk-the-talk --skill in-other-words
+npx skills add FMKreative/in-other-words --skill in-other-words
 ```
 
 For a manual installation, clone this repository into the appropriate skill directory. The resulting path should end in `in-other-words/SKILL.md`.
