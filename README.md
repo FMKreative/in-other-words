@@ -1,6 +1,6 @@
 # In Other Words
 
-Version 3.0.0
+Version 2.0.3
 
 Write, rewrite, summarize, and explain in clear, natural language. In Other Words helps you draft from notes, improve your own writing, or “unslop” AI-generated text by removing filler, inflated wording, stale phrases, and needless repetition while keeping the meaning and voice.
 
@@ -38,9 +38,5 @@ For a manual installation, clone this repository into the appropriate skill dire
 | Claude Code | `~/.claude/skills/in-other-words/` | `.claude/skills/in-other-words/` |
 
 The personal Codex installation has been checked locally. The [Claude Code path](https://code.claude.com/docs/en/skills) and Skills CLI command follow their documentation but have not been tested with this skill. Other agents may use different directories or invocation syntax.
-
-## Renaming from Talk the Talk
-
-In Other Words was previously published as Talk the Talk. Replace the old skill folder with `in-other-words` and use the new invocation. The skill still supports drafting, rewriting, summarizing, and guidance for other languages.
 
 The instructions are in [SKILL.md](SKILL.md), and Codex display settings are in [agents/openai.yaml](agents/openai.yaml). See [LICENSE](LICENSE) for reuse terms.
