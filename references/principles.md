@@ -1,6 +1,6 @@
 # Principles and sources
 
-Talk the Talk draws on three main writing references. Their practical guidance is incorporated in [SKILL.md](../SKILL.md); this page explains the sources behind it.
+In Other Words draws on three main writing references. Their practical guidance is incorporated in [SKILL.md](../SKILL.md); this page explains the sources behind it.
 
 ## George Orwell
 
@@ -16,7 +16,7 @@ The [plain language guides](https://digital.gov/guides/plain-language/) inform t
 
 ## A specific influence from ASD-STE100
 
-The project credited [ASD-STE100 Simplified Technical English](https://www.asd-ste100.org/) for one editing principle: recast a sentence when replacing individual words would sound unnatural or change its meaning. Talk the Talk retains that principle. It does not implement the standard or claim compliance with it.
+The project credited [ASD-STE100 Simplified Technical English](https://www.asd-ste100.org/) for one editing principle: recast a sentence when replacing individual words would sound unnatural or change its meaning. In Other Words retains that principle. It does not implement the standard or claim compliance with it.
 
 ## Applying the principles
 

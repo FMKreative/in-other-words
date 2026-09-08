@@ -1,4 +1,4 @@
 interface:
-  display_name: "Talk the Talk"
+  display_name: "In Other Words"
   short_description: "Clear, natural writing that keeps your meaning"
-  default_prompt: "Use $talk-the-talk to write or improve this text clearly and naturally for its intended reader."
+  default_prompt: "Use $in-other-words to write or improve this text clearly and naturally for its intended reader."

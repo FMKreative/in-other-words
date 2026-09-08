@@ -1,9 +1,9 @@
 ---
-name: talk-the-talk
+name: in-other-words
 description: Write, rewrite, summarize, and explain clearly and naturally in the requested language. Use for drafting from a brief, improving human or AI text, simplifying difficult passages, or producing faithful summaries while preserving accuracy and an appropriate voice.
 ---
 
-# Talk the Talk
+# In Other Words
 
 Help the intended reader understand the message. Follow the requested audience, language, tone, format, and length; otherwise use natural language for a broad adult audience.
 
